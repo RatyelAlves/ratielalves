@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio</title>
+    
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- NAVEGAÇÃO -->
+    <nav>
+        <div class="logo">
+            <img src="img/favicon.png" alt="Logo do site">
+        </div>
+        <div class="menu-toggle" id="mobile-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#about">Sobre Mim</a>
+            <a href="#education">Formação</a>
+            <a href="#portfolio">Portfólio</a>
+            <a href="#contact">Contato</a>
+        </div>
+    </nav>
+
+    <!-- SCRIPT PARA MENU HAMBÚRGUER -->
+    <script>
+        const mobileMenu = document.getElementById('mobile-menu');
+        const navLinks = document.querySelector('.nav-links');
+
+        mobileMenu.addEventListener('click', function (e) {
+            e.stopPropagation();
+            navLinks.classList.toggle('active');
+        });
+
+        document.addEventListener('click', function () {
+            if (navLinks.classList.contains('active')) {
+                navLinks.classList.remove('active');
+            }
+        });
+
+        navLinks.addEventListener('click', function (e) {
+            e.stopPropagation();
+        });
+    </script>
+
+    <!-- SEÇÃO: HOME -->
+    <section id="home">
+        <div class="container">
+            <h1 class="intro-title">Ratiel Alves</h1>
+            <p class="intro-subtitle">
+                <h4>
+                    <i>Graduando em Análise e Desenvolvimento de Sistemas pelo Centro Universitário Internacional UNINTER</i>
+                </h4>
+            </p>
+        </div>
+    </section>
+
+    <!-- SEÇÃO: SOBRE MIM -->
+    <section id="about">
+        <div class="content">
+            <div class="title-box-2">
+                <h2 class="title-left">Sobre mim</h2>
+            </div>
+            <p class="lead">
+                Me chamo Ratiel, nasci em 1997 em uma pequena cidade no interior de Minas Gerais. As dificuldades do lugar me fizeram vir para a capital para poder ingressar no mercado de trabalho e buscar <i>"meu lugar ao sol"</i> . Conheci a área de tecnologia, mais precisamente o desenvolvimento web, em 2016, a partir daí tive certeza do que eu queria fazer o resto da vida. 
+            </p>
+
+            <div class="title-box-2">
+                <h2 class="title-left">Por que escolhi trabalhar com web?</h2>
+            </div>
+            <p class="lead">
+                Trabalhar com desenvolvimento web é uma escolha atrativa devido à alta demanda de mercado e à versatilidade da área. Sites e aplicativos são essenciais para empresas e indivíduos, garantindo oportunidades constantes para desenvolvedores. Além disso, o trabalho combina habilidades técnicas com criatividade, permitindo criar interfaces inovadoras e impactar pessoas globalmente.
+            </p>
+        </div>
+    </section>
+
+    <!-- SEÇÃO: EDUCAÇÃO -->
+    <section id="education">
+        <div class="content">
+            <h2 class="title-degree">Formação</h2>
+            <p>
+                Atualmente estou cursando o primeiro ano do Tecnólogo em Análise e Desenvolvimento de Sistemas pelo Centro Universitário Internacional <b>UNINTER</b>. Desde o início da graduação, tenho estudado disciplinas essenciais como lógica de programação, algoritmos, estruturas de dados, banco de dados e engenharia de software.
+            </p>
+                
+            <p>
+                O curso enfatiza a prática, através de projetos e exercícios que simulam demandas do mercado, como o desenvolvimento de aplicações web e mobile, modelagem de sistemas e gestão de processos de software. Essa formação está me preparando para atuar em diversas áreas da tecnologia, como desenvolvimento de sistemas, análise de dados, automação de processos e consultoria em TI, contribuindo com soluções inovadoras que atendam às necessidades das empresas e da sociedade.
+            </p>
+
+            <p>
+                Estou entusiasmado em seguir aprendendo e aplicando esse conhecimento para crescer profissionalmente.
+            </p>
+        </div>
+    </section>
+
+    <!-- SEÇÃO: PORTFÓLIO -->
+    <section id="portfolio">
+        <div class="container">
+            <div class="title-box text-center">
+                <h3 class="title-a">Portfólio</h3>
+                <p class="subtitle-a">Meus Repositórios</p>
+                <div class="line-mf"></div>
+            </div>
+            
+            <!-- GRID DE PROJETOS -->
+            <div class="portfolio-grid">
+                <!-- PROJETO 1 -->
+                <div class="work-box">
+                    <div class="work-img">
+                        <img src="img/work-1.jpg" alt="Bloco de Notas">
+                    </div>
+                    <div class="work-content">
+                        <h2 class="w-title">Bloco de Notas</h2>
+                        <div class="w-more">
+                            <a href="https://github.com/RatyelAlves/Notes-Fullstack" target="_blank">Projeto Full-Stack</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PROJETO 2 -->
+                <div class="work-box">
+                    <div class="work-img">
+                        <img src="img/work-2.jpg" alt="TestFlask SMS API">
+                    </div>
+                    <div class="work-content">
+                        <h2 class="w-title">TestFlask SMS API</h2>
+                        <div class="w-more">
+                            <a href="https://github.com/RatyelAlves/TestFlask-SMS_API/tree/main/TestFlask-SMS_API" target="_blank">Comtele© API</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PROJETO 3 -->
+                <div class="work-box">
+                    <div class="work-img">
+                        <img src="img/work-3.png" alt="AWS Notifications">
+                    </div>
+                    <div class="work-content">
+                        <h2 class="w-title">AWS Notifications</h2>
+                        <div class="w-more">
+                            <a href="https://github.com/RatyelAlves/AWS_Lambda/tree/main/AWS_Lambda" target="_blank">AWS LAMBDA COMTELE© API</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="title-box text-center">
+                <p class="subtitle-a">
+                    <a href="https://github.com/RatyelAlves" class="view-more" target="_blank">Veja mais »</a>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO: CONTATO -->
+    <section id="contact">
+        <div class="contact-content">
+            <h2>Envie-me uma mensagem</h2>
+            <form>
+                <input type="text" placeholder="Nome" required>
+                <input type="email" placeholder="Email" required>
+                <input type="text" placeholder="Assunto" required>
+                <textarea placeholder="Mensagem" rows="5" required></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+
+        <!-- RODAPÉ -->
+        <footer>
+            <div class="container">
+                <p>&copy; Copy 2025 - <strong>Ratiel Alves</strong></p>
+            </div>
+        </footer>
+    </section>
+</body>
+</html>

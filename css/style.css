@@ -1,0 +1,386 @@
+/*============================
+//--//--> GLOBAL
+============================*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*============================
+//--//--> FONTES E TIPOGRAFIA
+============================*/
+@font-face {
+    font-family: 'Poppins Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: url('/fonts/Poppins-Regular.woff');
+    font-display: swap;
+}
+
+body {
+    font-family: 'Poppins Regular', Arial, sans-serif;
+    scroll-behavior: smooth;
+    background-color: #f5f5f5;
+    color: #4e4e4e;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #1e1e1e;
+}
+
+h1 {
+    font-size: 36px;
+    color: #ffffff;
+    margin-bottom: 15px;
+}
+
+h2, h3 {
+    font-size: 20px;
+}
+
+h4 {
+    font-size: 18px;
+    color: #fff;
+}
+
+a {
+    text-decoration: none;
+    color: #0078ff;
+    font-size: 13px;
+}
+
+p {
+    font-size: 15px;
+}
+
+.subtitle-a {
+    font-size: 12px;
+}
+
+/*============================
+//--//--> COMPONENTES GERAIS
+============================*/
+section {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.content {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    max-width: 800px;
+    text-align: center;
+    height: 80vh;
+    position: absolute;
+}
+
+/*============================
+//--//--> NAVEGAÇÃO
+============================*/
+nav {
+    height: 7vh;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: rgba(43, 42, 42, 0.5);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+}
+
+.logo img {
+    height: 4.8vh;
+}
+
+.nav-links {
+    display: flex; 
+    justify-content: space-between; 
+    gap: 1rem; 
+}
+
+.nav-links a {
+    font-size: 16px; 
+    color: #ffffff;
+    text-decoration: none;
+    text-align: center;
+    white-space: nowrap; 
+}
+
+.nav-links a:hover {
+    color: #002c5e;
+}
+
+nav a {
+    position: relative;
+    text-decoration: none;
+    color: #ffffff;
+    margin-left: 1rem;
+    font-size: 14px;
+    transition: color 0.5s ease-in;
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -4px;  
+    left: 0;
+    background-color: #0078ff;
+    transition: width 0.5s ease-in;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+/*============================
+//--//--> MENU HAMBÚRGUER
+============================*/
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    width: 25px;
+    height: 3px;
+    background: #ffffff;
+    margin: 3px 0;
+    transition: all 0.3s ease-in-out;
+}
+
+/*============================
+//--//--> SEÇÕES ESPECÍFICAS
+============================*/
+
+/* Home */
+#home {
+    background: url('../img/intro-bg.jpg') no-repeat center center/cover;
+    color: white;
+    text-align: center;
+}
+
+/* Sobre / Educação */
+#education {
+    background: url('../img/formacao-bg.jpg') no-repeat center center/cover;
+}
+
+#about .content, #education .content {
+    padding: 5vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: justify;
+    gap: 2rem;
+}
+
+#about .title-box-2, #education .degree {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Portfólio */
+#portfolio {
+    background: white;
+    color: black;
+    text-align: center;
+    padding: 2rem 0;
+    height: 100vh;
+}
+
+.portfolio-grid {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.line-mf {
+    width: 50px;
+    height: 2px;
+    background: #007BFF;
+    margin: 1rem auto;
+}
+
+.work-box {
+    flex: 1 1 calc(33.333% - 1rem);
+    max-width: calc(33.333% - 1rem);
+    margin-bottom: 2rem;
+}
+
+.work-img img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.view-more {
+    font-size: 14px;
+    position: relative;
+    text-decoration: none;
+    color: #0078ff; 
+    transition: color 0.3s ease-in;
+}
+
+.view-more::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background-color: #0078ff;
+    transition: width 0.3s ease-in;
+}
+
+.view-more:hover {
+    color: #0056b3;
+}
+
+.view-more:hover::after {
+    width: 100%;
+}
+
+/* Contato */
+#contact {
+    background: url('../img/overlay-bg.jpg') no-repeat center center/cover;
+    color: black;
+    text-align: center;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    height: 100vh;
+}
+
+.contact-content {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+}
+
+.contact-content input, .contact-content textarea {
+    width: 100%;
+    margin: 0.5rem 0;
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 12px;
+}
+
+.contact-content button {
+    background: #007BFF;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.contact-content button:hover {
+    background: #0056b3;
+}
+
+button {
+    font-size: 12px;
+}
+
+/*============================
+//--//--> RESPONSIVIDADE
+============================*/
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: flex;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 7vh;
+        right: 0;
+        background: rgba(56, 55, 55, 0.95);
+        width: 35vw;
+        padding: 1rem;
+        border-radius:0 0 8px 8px;
+    }
+
+    .nav-links a {
+        margin: 0.5rem 0;
+        text-align: center;
+        font-size: clamp(12px, 4vw, 16px);
+    }
+
+    .nav-links.active {
+        display: flex;
+        background: #0078ff;
+        font-size: 1em;
+    }
+
+    #about .content, #education .content {
+        height: 80vh;
+        max-width: 90%;
+        box-sizing: border-box;
+    }
+
+    .work-box {
+        flex: 1 1 100%;
+        max-width: 60%;
+    }
+
+    #portfolio {
+        padding: 2rem;
+        font-size: 1em;
+    }
+
+    .portfolio-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        justify-content: center;
+        font-size: 0.7rem;
+    }
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 1rem;
+        box-sizing: border-box;
+    }
+
+    section {
+        padding: 1rem;
+    }
+
+    h1, h2, h3, h5, h6 {
+        font-size: 1.5em;
+    }
+    h4 {
+        font-size: 1em;
+    }
+    p {
+        word-wrap: break-word;
+        font-size: 1em;
+    }
+}
